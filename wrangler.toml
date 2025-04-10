@@ -1,0 +1,6 @@
+name = "loocid-lab"
+main = "index.html"  # Or specify the path to your main HTML file
+compatibility_date = "2023-12-01"
+
+[site]
+bucket = "."  # This tells Wrangler that your site files are in the current directory
