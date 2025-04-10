@@ -80,7 +80,15 @@
       align-items: center;
       padding: 40px;
     }
-    
+    .menu-icon {
+      display: inline-block;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+   .menu-icon img {
+      vertical-align: middle;
+    }
     .login-container {
       background-color: #fff;
       border-radius: 8px;
