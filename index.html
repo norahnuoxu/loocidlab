@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoocidLab</title>
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header styles similar to Google */
+    header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 6px;
+      height: 60px;
+      align-items: center;
+    }
+
+    .header-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header-links a {
+      color: rgba(0, 0, 0, 0.87);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .header-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content area */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      padding-bottom: 100px; /* Push content up from bottom like Google */
+    }
+
+    /* Logo area */
+    .logo-container {
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 90px;
+      font-weight: 500;
+      color: #4285f4; /* Google blue */
+      letter-spacing: -5px;
+    }
+
+    .logo span:nth-child(2) { color: #ea4335; } /* Google red */
+    .logo span:nth-child(3) { color: #fbbc05; } /* Google yellow */
+    .logo span:nth-child(4) { color: #4285f4; } /* Google blue */
+    .logo span:nth-child(5) { color: #34a853; } /* Google green */
+    .logo span:nth-child(6) { color: #ea4335; } /* Google red */
+
+    /* Search box area */
+    .search-container {
+      width: 100%;
+      max-width: 584px;
+      margin: 0 auto 30px;
+    }
+
+    .search-box {
+      display: flex;
+      width: 100%;
+      height: 44px;
+      border: 1px solid #dfe1e5;
+      border-radius: 24px;
+      padding: 5px 8px 0 16px;
+    }
+
+    .search-box:hover {
+      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+      border-color: rgba(223, 225, 229, 0);
+    }
+
+    .search-input {
+      flex: 1;
+      height: 34px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-right: 8px;
+    }
+
+    /* Buttons area */
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .btn {
+      background-color: #f8f9fa;
+      border: 1px solid #f8f9fa;
+      border-radius: 4px;
+      color: #3c4043;
+      font-size: 14px;
+      padding: 0 16px;
+      height: 36px;
+      min-width: 54px;
+      text-align: center;
+      cursor: pointer;
+      margin: 11px 4px;
+    }
+
+    .btn:hover {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+      background-color: #f8f9fa;
+      border: 1px solid #dadce0;
+      color: #202124;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #f2f2f2;
+      color: #70757a;
+      font-size: 14px;
+    }
+
+    .footer-location {
+      padding: 15px 30px;
+      border-bottom: 1px solid #dadce0;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 15px;
+    }
+
+    .footer-left, .footer-right {
+      display: flex;
+      gap: 20px;
+    }
+
+    footer a {
+      color: #70757a;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .footer-links {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    /* Login/Signup button styling similar to Google's */
+    .login-btn {
+      background-color: #1a73e8;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      font-family: Google Sans, Roboto, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.25px;
+      line-height: 16px;
+      margin-left: 10px;
+      padding: 9px 23px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background-color: #1b66c9;
+      box-shadow: 0 1px 3px 1px rgba(66, 64, 67, 0.15);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-links">
+      <a href="#">About</a>
+      <a href="#">Store</a>
+      <div style="flex-grow: 1;"></div>
+      <a href="#">Contact</a>
+      <a href="#">Terms</a>
+      <a href="#" class="login-btn">Sign in</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="logo-container">
+      <h1 class="logo">
+        <span>L</span><span>o</span><span>o</span><span>c</span><span>i</span><span>d</span>
+      </h1>
+    </div>
+
+    <div class="search-container">
+      <div class="search-box">
+        <input type="text" class="search-input">
+        <div class="search-icons">
+          <!-- You can add search icon, voice icon, etc. here -->
+          🔍
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons-container">
+      <button class="btn">Search</button>
+      <button class="btn">I'm Feeling Lucky</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-location">
+      United States
+    </div>
+    <div class="footer-links">
+      <div class="footer-left">
+        <a href="#">Advertising</a>
+        <a href="#">Business</a>
+        <a href="#">How Search works</a>
+      </div>
+      <div class="footer-right">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Settings</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
