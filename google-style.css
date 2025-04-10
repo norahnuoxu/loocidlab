@@ -1,0 +1,207 @@
+/* Google-style CSS while preserving your content */
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #202124;
+  line-height: 1.58;
+  background-color: #fff;
+}
+
+/* Typography - Google uses clean, simple fonts */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Google Sans', Arial, sans-serif;
+  font-weight: 400;
+  color: #202124;
+}
+
+p, span, div, li, a {
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container styles */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Button styles - based on Google's button design */
+.btn {
+  font-family: 'Google Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  padding: 0 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: box-shadow 0.2s, background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1765cc;
+  box-shadow: 0 1px 2px 0 rgba(66, 133, 244, 0.3),
+              0 1px 3px 1px rgba(66, 133, 244, 0.15);
+}
+
+.btn-secondary {
+  background-color: #f8f9fa;
+  color: #3c4043;
+  border: 1px solid #dadce0;
+}
+
+.btn-secondary:hover {
+  background-color: #f1f3f4;
+  border-color: #d2d4d7;
+  color: #202124;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+              0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+/* Login container styling */
+.login-container {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+.button-container {
+  display: flex;
+  gap: 12px;
+}
+
+/* Form styles - Google uses clean, minimalist forms */
+input, select, textarea {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  color: #202124;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 1px #1a73e8;
+}
+
+/* Card/box styles - if you have content boxes */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  padding: 24px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+              0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  margin-bottom: 16px;
+}
+
+/* Header styling (if you have a header) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #dadce0;
+}
+
+/* Footer styling (if you have a footer) */
+footer {
+  background-color: #f8f9fa;
+  color: #70757a;
+  font-size: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #dadce0;
+}
+
+/* For the login and sign up buttons specifically */
+.login-container .btn {
+  min-width: 100px;
+}
+
+/* Google-style navigation */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  padding: 0;
+}
+
+nav a {
+  color: #5f6368;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #202124;
+}
+
+/* Google-style table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #5f6368;
+  font-weight: 500;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #dadce0;
+}
+
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #dadce0;
+}
+
+tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Google-style search box (if you have one) */
+.search-box {
+  display: flex;
+  width: 100%;
+  max-width: 584px;
+  height: 44px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  padding: 5px 8px 0 16px;
+  margin: 0 auto;
+}
+
+.search-box:hover, .search-box:focus-within {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
+}
+
+.search-input {
+  flex: 1;
+  height: 34px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
