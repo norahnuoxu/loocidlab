@@ -1,207 +1,287 @@
-/* Google-style CSS while preserving your content */
+/* Enhanced CSS for LoocidLab with improved colors and typography */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Poppins:wght@400;500;600&display=swap');
 
 /* Base styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   margin: 0;
   padding: 0;
-  color: #202124;
-  line-height: 1.58;
-  background-color: #fff;
+  color: #333333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
 }
 
-/* Typography - Google uses clean, simple fonts */
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Google Sans', Arial, sans-serif;
-  font-weight: 400;
-  color: #202124;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
 }
 
-p, span, div, li, a {
-  font-family: Arial, sans-serif;
+p {
+  margin-bottom: 1.5rem;
+  font-size: 16px;
 }
 
 a {
-  color: #1a73e8;
+  color: #3498db;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #2980b9;
+  text-decoration: none;
 }
 
 /* Container styles */
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
-/* Button styles - based on Google's button design */
-.btn {
-  font-family: 'Google Sans', Arial, sans-serif;
-  font-size: 14px;
+/* Header and Navigation */
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu-icon {
+  display: inline-block;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+.menu-icon img {
+  vertical-align: middle;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #2c3e50;
   font-weight: 500;
-  height: 36px;
-  padding: 0 24px;
-  border-radius: 4px;
+  font-size: 16px;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Button styles */
+.btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 6px;
   cursor: pointer;
   text-align: center;
-  transition: box-shadow 0.2s, background-color 0.2s;
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-block;
 }
 
 .btn-primary {
-  background-color: #1a73e8;
+  background-color: #3498db;
   color: white;
-  border: none;
+  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.25);
 }
 
 .btn-primary:hover {
-  background-color: #1765cc;
-  box-shadow: 0 1px 2px 0 rgba(66, 133, 244, 0.3),
-              0 1px 3px 1px rgba(66, 133, 244, 0.15);
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
 }
 
 .btn-secondary {
-  background-color: #f8f9fa;
-  color: #3c4043;
-  border: 1px solid #dadce0;
+  background-color: #e7f4fd;
+  color: #3498db;
+  box-shadow: 0 4px 6px rgba(231, 244, 253, 0.4);
 }
 
 .btn-secondary:hover {
-  background-color: #f1f3f4;
-  border-color: #d2d4d7;
-  color: #202124;
-  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
-              0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  background-color: #d6ebfa;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(231, 244, 253, 0.5);
 }
 
 /* Login container styling */
 .login-container {
   display: flex;
   justify-content: center;
-  padding: 24px 0;
+  padding: 30px 0;
 }
 
 .button-container {
   display: flex;
-  gap: 12px;
+  gap: 15px;
 }
 
-/* Form styles - Google uses clean, minimalist forms */
+/* Form styles */
 input, select, textarea {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
   padding: 12px 16px;
-  border: 1px solid #dadce0;
-  border-radius: 4px;
-  color: #202124;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  color: #333333;
   outline: none;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
 }
 
 input:focus, select:focus, textarea:focus {
-  border-color: #1a73e8;
-  box-shadow: 0 0 0 1px #1a73e8;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
-/* Card/box styles - if you have content boxes */
+/* Card/box styles */
 .card {
-  background-color: #fff;
-  border-radius: 8px;
-  border: 1px solid #dadce0;
-  padding: 24px;
-  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
-              0 1px 3px 1px rgba(60, 64, 67, 0.15);
-  margin-bottom: 16px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  padding: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Header styling (if you have a header) */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 24px;
-  border-bottom: 1px solid #dadce0;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Footer styling (if you have a footer) */
+/* Footer styling */
 footer {
-  background-color: #f8f9fa;
-  color: #70757a;
-  font-size: 12px;
-  padding: 16px 24px;
-  border-top: 1px solid #dadce0;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 40px 30px 20px;
+  margin-top: 50px;
 }
 
-/* For the login and sign up buttons specifically */
-.login-container .btn {
-  min-width: 100px;
+footer h4 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-/* Google-style navigation */
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 24px;
-  padding: 0;
+footer a {
+  color: #ecf0f1;
 }
 
-nav a {
-  color: #5f6368;
-  font-size: 14px;
-  text-decoration: none;
+footer a:hover {
+  color: #3498db;
 }
 
-nav a:hover {
-  color: #202124;
-}
-
-/* Google-style table */
+/* Table styles */
 table {
   border-collapse: collapse;
   width: 100%;
-  margin: 16px 0;
+  margin: 20px 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
 th {
-  background-color: #f8f9fa;
-  color: #5f6368;
-  font-weight: 500;
+  background-color: #3498db;
+  color: #ffffff;
+  font-weight: 600;
   text-align: left;
-  padding: 12px 16px;
-  border-bottom: 1px solid #dadce0;
+  padding: 15px 20px;
 }
 
 td {
-  padding: 12px 16px;
-  border-bottom: 1px solid #dadce0;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+tr:last-child td {
+  border-bottom: none;
 }
 
 tr:hover {
-  background-color: #f8f9fa;
+  background-color: #f5f9ff;
 }
 
-/* Google-style search box (if you have one) */
-.search-box {
-  display: flex;
-  width: 100%;
-  max-width: 584px;
-  height: 44px;
-  border: 1px solid #dfe1e5;
-  border-radius: 24px;
-  padding: 5px 8px 0 16px;
-  margin: 0 auto;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
-.search-box:hover, .search-box:focus-within {
-  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
-  border-color: rgba(223, 225, 229, 0);
+/* Custom animation for hover effects */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.search-input {
-  flex: 1;
-  height: 34px;
-  border: none;
-  outline: none;
-  font-size: 16px;
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Override any inline styles */
+.btn-primary {
+  background-color: #3498db !important;
+  color: white !important;
+}
+
+.btn-secondary {
+  background-color: #e7f4fd !important;
+  color: #3498db !important;
+}
+
+/* Menu icon specific styling */
+.menu-icon img {
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.menu-icon:hover img {
+  opacity: 1;
 }
